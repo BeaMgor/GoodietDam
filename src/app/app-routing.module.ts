@@ -7,7 +7,7 @@ import { RecetasComponent } from './pages/recetas/recetas.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'register',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   
