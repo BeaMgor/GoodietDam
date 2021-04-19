@@ -1,0 +1,28 @@
+
+
+<div class="container">
+    <div class="row">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Título</th>
+                <th scope="col">Descripción</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let receta of this.recetas">
+                    <th scope="row">{{ receta.id }}</th>
+                    <td>{{ receta.titulo }}</td>
+                    <td>{{ receta.descripcion }}</td>
+                    <td><button type="button" class="btn btn-danger" (click)='this.deleteReceta(receta.id)'>Eliminar</button></td>
+                </tr>
+              
+              <!-- <button class="btn btn-success" (click)='this.addOferta()' >Añadir oferta</button> -->
+            </tbody>
+          </table>
+
+    </div>
+
+
+</div>
