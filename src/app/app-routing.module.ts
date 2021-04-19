@@ -7,7 +7,7 @@ import { RecetasComponent } from './pages/recetas/recetas.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'recetas',
+    redirectTo: 'register',
     pathMatch: 'full'
   },
   

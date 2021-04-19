@@ -1,54 +1,60 @@
 
+<div id="contenedor">
+
+    <header>
+        <h3>¡¡Registrate y empieza a disfrutar!!</h3>
+    </header>
+
+
 <div class="container">
     <div class="row">
         
         <!-- definimos una accion y aqui guardamos los datos que nos envia cuando pulsamos el boton envair -->
         <form #registroForm='ngForm' (ngSubmit)=onSubmit(registroForm)>
-            <h1>Formulario de registro</h1>
             <br><br>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="nombre">Nombre*</label>
+                    <label id= "titulos" for="nombre">Nombre*</label>
                     <input type="text" class="form-control" name='username' #username [(ngModel)]="registroModel.username" required>
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="apellido">Apellidos*</label>
+                    <label id= "titulos" for="apellido">Apellidos*</label>
                     <input type="apellidos" class="form-control" name="surname" #surname [(ngModel)]="registroModel.surname" required>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="telefono">Teléfono*</label>
+                    <label id= "titulos" for="telefono">Teléfono*</label>
                     <input type="text" class="form-control" name="phone" #phone [(ngModel)]="registroModel.phone" required>
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="email">Email*</label>
+                    <label id= "titulos" for="email">Email*</label>
                     <input type="email" class="form-control" name="email" #email [(ngModel)]="registroModel.email" required>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="password">Contraseña*</label>
+                    <label id= "titulos" for="password">Contraseña*</label>
                     <input type="password" class="form-control" name="password" #password [(ngModel)]="registroModel.password" placeholder="La contraseña debe tener mínimo 6 carateres"required>
                     <label *ngIf="!this.ok">{{msg}}</label>
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="password">Repetir contraseña*</label>
+                    <label id= "titulos" for="password">Repetir contraseña*</label>
                     <input type="password" class="form-control" name="password2" #password2 [(ngModel)]="registroModel.password2" placeholder="Las contraseñas deben coincidir"required>
                     <label *ngIf="!this.ok">{{msg2}}</label>
                 </div>
             </div>
             <div class="form-group">
-                <label for="direccion">Dirección</label>
+                <label id= "titulos" for="direccion">Dirección</label>
                 <input type="text" class="form-control" name="direction" #direction [(ngModel)]="registroModel.direction" placeholder="Calle, Avenida... ">
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="localidad">Localidad</label>
+                    <label id= "titulos" for="localidad">Localidad</label>
                     <input type="text" class="form-control" name="location" #location [(ngModel)]="registroModel.location">
                 </div>
             <div class="form-group col-md-6">
-                <label for="provincia">Provincia</label>
+                <label id= "titulos" for="provincia">Provincia</label>
                 <select name="province" class="form-control" #province [(ngModel)]="registroModel.province">
                 <option value="">- selecciona -</option>
                 <option value="15">A coru&#241;a</option>
