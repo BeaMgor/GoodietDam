@@ -128,5 +128,8 @@
       }
     }
   },
-  "defaultProject": "goodiet"
+  "defaultProject": "goodiet",
+  "cli": {
+    "analytics": "38625f26-22ac-4aba-a2fe-de54e1ef4b32"
+  }
 }

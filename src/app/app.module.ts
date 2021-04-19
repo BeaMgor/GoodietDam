@@ -1,3 +1,4 @@
+import { RegistroService } from './services/registro.service';
 import { PagesModule } from './pages/pages.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -18,7 +19,10 @@ import { HttpClientModule } from '@angular/common/http';
     PagesModule,
     HttpClientModule
   ],
-  providers: [LoginService],
+  providers: [
+    LoginService,
+    RegistroService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
