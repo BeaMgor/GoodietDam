@@ -1,0 +1,96 @@
+
+
+.header {
+    text-align: center;
+    height: 300px;
+    padding: 12px;
+    background-image: url(../../../assets/images/fondoReceta.jpg);
+}
+
+.avatarusuario {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+
+}
+
+.avataramigos {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; 
+    margin: 30px 20px;
+
+}
+.user-name {
+    font-size: 18px;
+    margin-top: 14px;
+    font-family: "Montserrat" sans-serif;
+    color: white;
+}
+
+.opciones {
+    text-align: center;
+    padding: 0;
+
+}
+.opciones li {
+    margin: 15px;
+
+}
+a {
+    text-decoration: none;
+    color: #66d663;
+    font-size: 17px;
+    font-weight: 500;
+    
+}
+a:hover {
+    color: #2ca434;
+}
+
+a:active {
+   color:#b7e4b4; 
+}
+
+.about {
+    padding: 10px;
+
+}
+.about h3 {
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Montserrat" sans-serif;
+
+}
+.about p {
+    color: black;
+    font-size: 14px;
+    display: inline-block;
+    padding: .5rem .8rem;
+}
+
+.about p:focus {
+    outline: none;
+    border: 1px solid #2980b9;
+}
+button {
+    color: white;
+    background: #66d663 ;
+    border-radius: 20px;
+    margin: 20px;
+    
+}
+
+label {
+    font-family: "Opens Sans";
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.cuenta {
+    margin-left: 30px; 
+    margin-top: 20px;
+}
+

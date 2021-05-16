@@ -1,10 +1,3 @@
-
-<<<<<<< HEAD
-
-<div class="container">
-    <div class="row">
-        <table class="table">
-=======
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -14,24 +7,24 @@
   <title>Home</title>
 </head>
 
-
-
 <body>
-  
-    <div class="topnav">
-      <img src="../../../assets/images/logo2.png">
-      <a class="active" href="#Inicio">Inicio</a>
-      <a href="/usuario">Perfil</a>
-      <a href="/home">Cerrar Sesión</a>
 
+    <div class="topnav">
+      <a class="active" href="#Inicio">Inicio</a>
+      <a routerLink="/login">Login</a>
+      <a routerLink="/registro">Registro</a>
+      <!-- Este botón se eliminará  -->
+      <a routerLink="/recetas">Recetas</a>
       <div class="search-container">
         <input type="search" placeholder="Search.." name="search">
         <input class="search-container" type="submit" value="Buscar">
       </div>
+      <img class="centrado" src="../../../assets/images/logo2.png">
 
-      <div class="container">
+    </div>
+
+    <div class="contenedor">
         <table class="table table-bordered">
->>>>>>> 6ec43761d6308e670c38d8a4d53833771a2be538
             <thead>
               <tr>
                 <th scope="col">#</th>
@@ -44,31 +37,12 @@
                     <th scope="row">{{ receta.id }}</th>
                     <td>{{ receta.titulo }}</td>
                     <td>{{ receta.descripcion }}</td>
-<<<<<<< HEAD
-                    <td><button type="button" class="btn btn-danger" (click)='this.deleteReceta(receta.id)'>Eliminar</button></td>
-                </tr>
-              
-              <!-- <button class="btn btn-success" (click)='this.addOferta()' >Añadir oferta</button> -->
-=======
                     <!-- cambiar la función del click (Félix)
                     <td><button  class="btn btn-info" (click)='this.goToDetalle(receta.id)'>Ver</button></td> -->
                 </tr>
->>>>>>> 6ec43761d6308e670c38d8a4d53833771a2be538
             </tbody>
           </table>
-
     </div>
-<<<<<<< HEAD
-
-
-</div>
-=======
-    </div>
-
-     
- 
 
 </body>
 </html>
-
->>>>>>> 6ec43761d6308e670c38d8a4d53833771a2be538

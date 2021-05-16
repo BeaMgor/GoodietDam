@@ -1,0 +1,44 @@
+
+h1{
+    text-align: center;
+    font: 3rem 'Montserrat', sans-serif;
+    font-weight: 600;
+    color:  #fefeff;
+}
+
+h3 {
+    text-align: center;
+    font: 2rem "Montserrat", sans-serif;
+}
+
+footer{
+    background-size: cover;  
+    height: 10vh;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #f13e3e;
+}
+.topnav a {
+    float: left;
+    display: block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 500;
+  }
+
+  .topnav a:hover {
+    background-color: #e26860;
+    color: black;
+  }
+  
+  /* Style the "active" element to highlight the current page */
+  .topnav a.active {
+    background-color: #e06b67;
+    color: white;
+  }
+

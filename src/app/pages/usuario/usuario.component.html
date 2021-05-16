@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Perfil</title>
+    </head>
+    <body>
+        <div class="header">
+            <img class="avatarusuario" src="../../../assets/images/avatar.jpg">   
+             <!--Tenemos que hacer binding para que aparezca el nombre del usuario {{usuario.name}}-->
+            <h1 class="user-name">Usuario</h1>
+        </div>
+
+      
+    <div class="well">
+       <ul class="opciones nav nav-tabs">
+
+           <li>
+               <a href="/recetas">Inicio</a>
+           </li>
+
+           <li class="active">
+               <a href="#sobremi" data-toggle="tab">Sobre mí</a>
+           </li>
+           <li>
+               <a href="#cuenta" data-toggle="tab">Cuenta</a>
+           </li>
+           <li>
+                <a href="#favoritas" data-toggle="tab">Recetas Favoritas</a>
+           </li>
+           <li>
+                <a href="#amigos" data-toggle="tab">Amigos</a>
+           </li>
+       </ul> 
+
+       <div id="myTabContent" class="tab-content">
+            <div class="tab-pane active in about" id="sobremi">
+                <h3 id="tab">Sobre mí</h3>
+                <p contenteditable="true">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            </div>
+
+            <div class="tab-pane fade" id="cuenta">
+                <form class="cuenta" id="tab2">
+                    <label>Nombre</label><br>
+                    <input type="text" value="Pepe" class="input-xlarge" name="name"><br><br>
+ 
+                    <label>Apellido</label><br>
+                    <input type="text" value="Garcia" class="input-xlarge" name="surname"><br><br>
+        
+                    <label>Email</label><br>
+                    <input type="text" value="pepegarcia@gmeail.com" class="input-xlarge" name="email"><br><br>
+                   
+                    <div>
+                        <button class="btn">Guardar cambios</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="tab-pane fade" id="favoritas">
+                <table class="table table-bordered" id="tab3">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Título</th>
+                        <th scope="col">Descripción</th>
+                      </tr>
+                    </thead>
+                    <!--  
+                    <tbody>
+                        <tr *ngFor="let receta of this.recetas">
+                            <th scope="row">{{ receta.id }}</th>
+                            <td>{{ receta.titulo }}</td>
+                            <td>{{ receta.descripcion }}</td>
+                             cambiar la función del click (Félix)
+                            <td><button  class="btn btn-info" (click)='this.goToDetalle(receta.id)'>Ver</button></td> 
+                        </tr>
+                    </tbody>-->
+                  </table>
+            </div>
+
+            <div class="tab-pane fade" id="amigos">
+                <div id="tab4">
+                    <img class="avataramigos" src="../../../assets/images/avatar.jpg">
+                    <label>Pepa</label>  
+                </div>
+                <div id="tab4">
+                    <img class="avataramigos" src="../../../assets/images/avatar.jpg">
+                    <label>Lola</label>  
+                </div>
+                <div id="tab4">
+                    <img class="avataramigos" src="../../../assets/images/avatar.jpg">
+                    <label>Luis</label>  
+                </div>
+            </div> 
+
+
+        </div>
+      </div>
+    </body>
+
+</html>
+
