@@ -1,8 +1,9 @@
-<div class="container">
-    <div class="row">
+<div class="row justify-content-center">
 
         <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
-          <h1>Inicio de sesión</h1>
+          <br><br>
+          <h1>¡Bienvenid@ a Goodiet!</h1>
+          <img src="../../../assets/images/logoGoodiet.png" alt="">
           <br><br>
             <div class="mb-3">
               <label class="form-label">Usuario</label>
@@ -13,13 +14,12 @@
               <label class="form-label">Contraseña</label>
               <input type="password" class="form-control" name="password" #password [(ngModel)]="loginModel.password">
             </div>
-            <br>
-            <button type="submit" class="btn btn-primary">Enviar</button>
+              <a><button type="submit" class="btn btn-success">Enviar</button></a>
             <br><br>
             <div>
-              <a class="button" class="btn btn-primary" routerLink='/register'>Registrar</a>
+              <a class="button" class="btn btn-success" routerLink='/register'>Registrar</a>
             </div>
           </form>
-
-    </div>
+          
 </div>
+

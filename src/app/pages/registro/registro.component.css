@@ -10,14 +10,14 @@
     background-attachment: fixed;
     }
 
-    h3{ 
-        text-align: center;
-        font: 3rem 'Castoro', sans-serif;
-        color:  #fefeff;
-    }
+h3{ 
+    text-align: center;
+    font: 3rem 'Castoro', sans-serif;
+    color:  #fefeff;
+}
 
-    #titulos{
-        font: 1.2rem; 
-        color: white ;
-        font-style: italic;
-    }
+#titulos{
+    font: 1.2rem; 
+    color: white ;
+    font-style: italic;
+}

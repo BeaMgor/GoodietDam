@@ -1,3 +1,4 @@
+import { DetalleModule } from './detalle/detalle.module';
 import { RecetasModule } from './recetas/recetas.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -12,12 +13,14 @@ import { RegistroModule } from './registro/registro.module';
     CommonModule, 
     LoginModule,
     RegistroModule,
-    RecetasModule
+    RecetasModule,
+    DetalleModule
   ],
   exports: [
     LoginModule,
     RegistroModule,
-    RecetasModule
+    RecetasModule,
+    DetalleModule
   ]
 })
 export class PagesModule { }
