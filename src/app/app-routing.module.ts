@@ -3,12 +3,20 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { RegistroComponent } from './pages/registro/registro.component';
 import { RecetasComponent } from './pages/recetas/recetas.component';
+import { TerminosComponent } from './pages/terminos/terminos.component';
+import { UsuarioComponent } from './pages/usuario/usuario.component';
+import { HomeComponent } from './pages/home/home.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'register',
+    redirectTo: 'home',
     pathMatch: 'full'
+  },
+
+  {
+    path: 'home',
+    component: HomeComponent
   },
   
   {
@@ -16,7 +24,7 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'register',
+    path: 'registro',
     component: RegistroComponent      
     
   },
@@ -25,6 +33,15 @@ const routes: Routes = [
     component: RecetasComponent
   },
 
+  {
+    path: 'terminos',
+    component: TerminosComponent
+  },
+
+  {
+    path: 'usuario',
+    component: UsuarioComponent
+  },
 ];
 
 @NgModule({
