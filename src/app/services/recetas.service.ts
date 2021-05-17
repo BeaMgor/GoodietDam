@@ -48,7 +48,7 @@ export class RecetasService {
 
         //httpclient, con la url de la api
 
-        this.httpClient.get('', httpOptions).subscribe(
+        this.httpClient.get('http://localhost:8082/api/v1/recipes', httpOptions).subscribe(
             (response: any) => {
                 this.recetas = response;
                 this.recetas$.next(this.recetas);
@@ -70,7 +70,7 @@ export class RecetasService {
                 }
             )
         };
-        this.httpClient.delete('' + id, httpOptions).subscribe(
+        this.httpClient.delete('http://localhost:8082/api/v1/recipes' + id, httpOptions).subscribe(
             (response: any) => {
                 // la respuesta cuando se borra es un getofertas que es donde está todo montado: la petición a la api
                 // la actualizacion y la notificacion.
