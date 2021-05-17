@@ -1,0 +1,26 @@
+h1{
+    text-align: center;
+    color: #f49930;
+}
+
+img{
+    width: 50%;
+}
+
+div{
+    text-align:center;
+}
+
+label{
+    font-size: 1.3rem;
+}
+
+a{
+    border: #66d663;
+    background-color: #66d663;
+}
+
+button{
+    border: #66d663;
+    background-color: #66d663;
+}
