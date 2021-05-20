@@ -1,0 +1,29 @@
+body{
+    background-color: rgb(189, 241, 215);
+    width: 70%;
+    margin: auto;
+}
+
+img{
+    margin-bottom: 2%;
+    width: 40%;
+}
+
+div{
+    text-align:center;
+}
+
+h1{
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width: 100%;
+    color: #2ca434;
+}
+p{
+    text-align: left;
+}
+
+H3{
+    text-align: center;
+    color: #2ca434;
+}
