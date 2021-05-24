@@ -1,20 +1,18 @@
 
 
-
-
-
 /* Add a black background color to the top navigation bar */
 .topnav {
   width: 100%;
   margin: auto;
+  
   }
   
   .topnav img {
     float: left; 
-    padding: 10px;
-    width: 100px;
-    height: 100px;
-    
+    padding:5px;
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
   }
   /* Style the links inside the navigation bar */
   .topnav a {
@@ -32,12 +30,7 @@
   .topnav a:hover {
     color: #2ca434;
   }
-  
-  /* Style the "active" element to highlight the current page */
-  .topnav a.active {
-    background-color: #9bff93;
-    color: white;
-  }
+ 
   .topnav .search-container {
     float: right;
     
@@ -53,10 +46,8 @@
     font-size: 17px;
   }
   .topnav .search-container input {
-    float: center;
     padding: 5px;
-    margin-bottom: 10px;
-    margin-left: 10px;
+    margin-right: 10px;
     background: rgb(252, 252, 252);
     font-size: 17px;
     border: none;

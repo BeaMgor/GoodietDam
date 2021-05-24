@@ -35,18 +35,12 @@ export class HomeComponent implements OnInit {
       (error: any) => {
         console.log(error)
       }
-      
     );
+
+    this.recetaService.getRecetas();
   }
 
-  public deleteReceta(id: number): void {
-    console.log('Click ' + id);
-
-    // Este metodo es el que se va a encargar de llamar al metodo del html que se encargara de llamar la API
-    // y comunicarle que un elemento ha siod eliminado.
-    this.recetaService.deleteReceta(id);
-  }
-
+  /*tiene que ir función getDetalleReceta*/ 
 }
 
 

@@ -1,54 +1,40 @@
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
-</head>
 
 
+<div class="topnav">
+  <a href="/home"><img src="../../../assets/images/logo2.png"></a>
+  <a href="/usuario">Perfil</a>
+  <a href="/home">Cerrar Sesión</a>
 
-<body>
-  
-    <div class="topnav">
-      <img src="../../../assets/images/logo2.png">
-      <a class="active" href="#Inicio">Inicio</a>
-      <a href="/usuario">Perfil</a>
-      <a href="/home">Cerrar Sesión</a>
+  <div class="search-container">
+    <input type="search" placeholder="Search.." name="search">
+    <input class="search-container" type="submit" value="Buscar">
+  </div>
+</div>
 
-      <div class="search-container">
-        <input type="search" placeholder="Search.." name="search">
-        <input class="search-container" type="submit" value="Buscar">
-      </div>
+<div class="container">
+  <div class="row">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Título</th>
+          <th scope="col">Descripción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let receta of this.recetas">
+          <th scope="row">{{ receta.id }}</th>
+          <td>{{ receta.name }}</td>
+          <td>{{ receta.descripcion }}</td>
+          <!-- cambiar la función del click (Félix) -->
+          <!-- <td><button  class="btn btn-info" (click)='this.goToDetalle(receta.id)'>Ver</button></td>  -->
+        </tr>
+      </tbody>
+    </table>
 
-      <div class="container">
-        <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Título</th>
-                <th scope="col">Descripción</th>
-              </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let receta of this.recetas">
-                    <th scope="row">{{ receta.id }}</th>
-                    <td>{{ receta.titulo }}</td>
-                    <td>{{ receta.descripcion }}</td>
-                    <!-- cambiar la función del click (Félix)
-                    <td><button  class="btn btn-info" (click)='this.goToDetalle(receta.id)'>Ver</button></td> -->
-                </tr>
-            </tbody>
-          </table>
-
-    </div>
-    </div>
-
+  </div>
+      
+</div>
      
- 
-
-</body>
-</html>
 

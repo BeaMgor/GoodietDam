@@ -34,9 +34,10 @@ export class RecetasComponent implements OnInit {
       },
       (error: any) => {
         console.log(error)
-      }
-      
+      } 
     );
+
+    this.recetaService.getRecetas();
   }
 
   public deleteReceta(id: number): void {

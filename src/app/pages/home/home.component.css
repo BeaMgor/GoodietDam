@@ -4,18 +4,15 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  background: #f0f0f0;
+#contenedor{
+  width: 100%;
+  background-size:cover;
+  margin: auto;
+  background-attachment: fixed;
+
 
 }
-
-.contenedor {
-  width: 1200px;
-  margin: 0 auto;
-  overflow: hidden;
-}
-
+/* imagen logo */
 .centrado {
   width: 350px;
   height: 400px;
@@ -48,11 +45,6 @@ body {
     color: #2ca434;
   }
   
-  /* Style the "active" element to highlight the current page */
-  .topnav a.active {
-    background-color: #9bff93;
-    color: white;
-  }
   .topnav .search-container {
     float: right;
   }
@@ -95,3 +87,4 @@ body {
       border: 1px solid #ccc;  
     }
   }
+
