@@ -2,11 +2,20 @@
 
 <div class="container">
 
-    <div class="topnav">
-        <h1>GOODIET</h1>
-        <a class="active" href="/home">Inicio</a>
-        <a href="/registro">Registro</a>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #66d663 !important;">
+        <a class="navbar-brand" routerLink="/login">Login</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/registro">Registro</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+
     <br>
     <h3>Términos y Condiciones de Uso de Sitio Web</h3>
     <br>
@@ -131,12 +140,11 @@
 
         </article>
     </div>
+
+
+    <div id="footer">
+        <p>&copy; All rights reserved. Created by GoodietTeam </p>
+    </div>
+    
 </div>
 
-<footer class="container-fluid mt-5 pt-5">
-    <div class="row">
-        <div class="col text-black text-center">
-            <p>Goodiet. @Todos los derechos reservados</p>
-        </div>
-    </div>
-</footer>

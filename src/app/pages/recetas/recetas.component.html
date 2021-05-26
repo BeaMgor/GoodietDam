@@ -1,20 +1,28 @@
 
+<div id="contenedor">
 
-
-<div class="topnav">
-  <a href="/home"><img src="../../../assets/images/logo2.png"></a>
-  <a href="/usuario">Perfil</a>
-  <a href="/home">Cerrar Sesión</a>
-
-  <div class="search-container">
-    <input type="search" placeholder="Search.." name="search">
-    <input class="search-container" type="submit" value="Buscar">
-  </div>
-</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #66d663 !important;">
+    <a class="navbar-brand" routerLink="/usuario">Perfil</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+ 
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/">Logout</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+</nav>
 
 <div class="container">
   <div class="row">
-    <table class="table table-bordered">
+    <table class="table table-bordered mt-3">
       <thead>
         <tr>
           <th scope="col">#</th>
@@ -25,16 +33,22 @@
       <tbody>
         <tr *ngFor="let receta of this.recetas">
           <th scope="row">{{ receta.id }}</th>
-          <td>{{ receta.name }}</td>
-          <td>{{ receta.descripcion }}</td>
+          <td>{{ receta.nombre }}</td>
+          <td>{{ receta.cantidad }}</td>
           <!-- cambiar la función del click (Félix) -->
-          <!-- <td><button  class="btn btn-info" (click)='this.goToDetalle(receta.id)'>Ver</button></td>  -->
+          <td><button  class="btn btn-info" (click)='this.irDetalle(receta.id)'>Ver</button></td>
         </tr>
       </tbody>
     </table>
 
   </div>
       
+  </div>
+
+  <div id="footer">
+    <p>&copy; All rights reserved. Created by Goodieteam </p>
+  </div>
+
+
 </div>
      
-
