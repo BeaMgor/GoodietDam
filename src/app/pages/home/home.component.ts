@@ -13,11 +13,8 @@ export class HomeComponent implements OnInit {
 
   public recetas: Array<Receta>;
   private sub: any;
-  private subLogin: any;
 
-
-
-  constructor(private loginService: LoginService,
+  constructor(
     private recetaService: RecetasService,
     private router: Router) { 
 
@@ -40,7 +37,6 @@ export class HomeComponent implements OnInit {
     this.recetaService.getRecetas();
   }
 
-  /*tiene que ir función getDetalleReceta*/ 
 }
 
 

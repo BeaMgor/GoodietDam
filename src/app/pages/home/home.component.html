@@ -1,40 +1,66 @@
 
-<div id="contenedor">
 
-  <div class="topnav">
-    <a routerLink="/login">Login</a>
-    <a routerLink="/registro">Registro</a>
-    <!-- Este botón se eliminará  -->
-    <a href="/recetas">Recetas</a>
-    <div class="search-container">
-      <input type="search" placeholder="Search.." name="search">
-      <input class="search-container" type="submit" value="Buscar">
-    </div>
-    <img class="centrado" src="../../../assets/images/logo2.png">
+    <main role="main">
+       <section class="text-center">
+        <img src="../../../assets/images/logo2.png" width="300" height="300" class="my-4">
+        <div class="container">
+          <h1 class="jumbotron-heading">Bienvenidos a Goodiet</h1>
+          <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
+          <p>
+            <a routerLink="/login" class="btn mr-2">Login</a>
+            <a routerLink="/registro" class="btn ml-2">Regístrate</a>
+          </p>
+        </div>
+      </section>
+    </main>
 
-  </div>
-  
-    
-    <div class="container" style="background: rgb(255, 255, 255); margin-left: 10%; margin-bottom: 10%;">
-      <div class="row">
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th scope="col">Título</th> 
-              <th scope="col">Descripción</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr *ngFor="let receta of this.recetas">
-                  <th scope="row">{{receta.name}}</th>
-                  <td>{{receta.descripcion}}</td>
-                  
-                  <!-- cambiar la función del click (Félix) 
-                  <td><button  class="btn btn-info" (click)='this.goToDetalle(receta.id)'>Ver</button></td> -->
-              </tr>
-          </tbody>
-        </table>
+
+  <div class="container marketing py-5">
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+      </div>
+      <div class="col-md-5">
+        <img class="featurette-image img-fluid mx-auto" src="../../../assets/images/sushi.jpg" width="460" height="200">
       </div>
     </div>
 
-</div>
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
+        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img class="featurette-image img-fluid mx-auto" src="../../../assets/images/vegetariana.jpg" width="460" height="200">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+      </div>
+      <div class="col-md-5">
+        <img class="featurette-image img-fluid mx-auto" src="../../../assets/images/hambur.jpg" width="460" height="200">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+  <div id="footer">
+    <p>&copy; All rights reserved. Created by Goodieteam </p>
+  </div>
+

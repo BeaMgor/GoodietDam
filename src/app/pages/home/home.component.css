@@ -1,90 +1,31 @@
 
 
-* {
-  box-sizing: border-box;
+
+#footer {
+  margin: 0 auto;
+  padding: 50px 0 15px 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
-#contenedor{
-  width: 100%;
-  background-size:cover;
-  margin: auto;
-  background-attachment: fixed;
-
+#footer p {
+  margin: 0;
+  padding-top: 10px;
+  letter-spacing: 1px;
+  line-height: normal;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  color: black;
+  font-weight: bold;
 
 }
-/* imagen logo */
-.centrado {
-  width: 350px;
-  height: 400px;
-  display: block;
-  margin: auto;
-  padding-top: 50px;
-  padding-bottom: 20px;
+
+
+a {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  background: #66d663;
+  color: #FFFFFF;
+  border-radius: 30px;
+  
 }
-
-/* Add a black background color to the top navigation bar */
-.topnav {
-  width: 100%;
-  margin: auto;
-  height: 400px;
-  }
-
-  /* Style the links inside the navigation bar */
-  .topnav a {
-    float: left;
-    color: #66d663;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    font-weight: 500;
-    font-family: "Opens Sans" sans-serif;
-  }
-  
-  /* Change the color of links on hover */
-  .topnav a:hover {
-    color: #2ca434;
-  }
-  
-  .topnav .search-container {
-    float: right;
-  }
-  
-  /* Style the search box inside the navigation bar */
-  .topnav input[type=text] {
-    float: right;
-    padding: 6px;
-    border: none;
-    margin-top: 8px;
-    margin-right: 16px;
-    font-size: 17px;
-  }
-  .topnav .search-container input {
-    padding: 5px;
-    margin-right: 10px;
-    background: rgb(252, 252, 252);
-    font-size: 17px;
-    border: none;
-    cursor: pointer;
-  }
-  .topnav .search-container input:hover {
-    background: rgb(235, 232, 232);
-  }
-  
-  /* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
-  @media screen and (max-width: 600px) {
-    .topnav .search-container {
-      float: none;
-    }
-    .topnav a, .topnav input[type=text], .topnav .search-container input {
-      float: none;
-      display: block;
-      text-align: left;
-      width: 100%;
-      margin: 0;
-      padding: 14px;
-    }
-    .topnav input[type=text] {
-      border: 1px solid #ccc;  
-    }
-  }
-
