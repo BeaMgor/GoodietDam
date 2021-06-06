@@ -5,7 +5,6 @@
 export class registroForm {
     public username!: string;
     public password!: string;
-    public password2!: string;
     public email!: string;
    
 
@@ -14,7 +13,6 @@ export class registroForm {
     constructor(){
         this.username = '';
         this.password = '';
-        this.password2 = '';
         this.email = '';
     }
 }
