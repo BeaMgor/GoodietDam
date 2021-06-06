@@ -1,3 +1,5 @@
+
+import { RecetasService } from 'src/app/services/recetas.service';
 import { RegistroService } from './services/registro.service';
 import { PagesModule } from './pages/pages.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -17,11 +19,13 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     PagesModule,
-    HttpClientModule
+    HttpClientModule,
+    
   ],
   providers: [
     LoginService,
-    RegistroService
+    RegistroService,
+    RecetasService
   ],
   bootstrap: [AppComponent]
 })

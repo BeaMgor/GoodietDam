@@ -6,6 +6,7 @@ import { RegistroModule } from './registro/registro.module';
 import { TerminosModule } from './terminos/terminos.module';
 import { UsuarioModule } from './usuario/usuario.module';
 import { HomeModule } from './home/home.module';
+import { DetalleModule } from './detalle/detalle.module';
 
 
 
@@ -18,7 +19,8 @@ import { HomeModule } from './home/home.module';
     RecetasModule,
     TerminosModule,
     UsuarioModule,
-    HomeModule
+    HomeModule,
+    DetalleModule
   ],
   exports: [
     LoginModule,
@@ -26,7 +28,8 @@ import { HomeModule } from './home/home.module';
     RecetasModule,
     TerminosModule,
     UsuarioModule,
-    HomeModule
+    HomeModule,
+    DetalleModule
   ]
 })
 export class PagesModule { }
