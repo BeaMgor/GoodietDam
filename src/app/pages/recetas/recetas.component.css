@@ -32,4 +32,30 @@
 }
 
 
+input[type="radio"] {
+  display: none;
+}
 
+label {
+  color: grey;
+}
+
+.clasificacion {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+label:hover,
+label:hover ~ label {
+  color: orange;
+}
+
+input[type="radio"]:checked ~ label {
+  color: orange;
+}
+.imagenreceta {
+  width: 175px;
+  height: 175px; 
+  margin-right: 15px;
+  margin-left: 20px;
+}

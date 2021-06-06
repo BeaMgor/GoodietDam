@@ -34,55 +34,38 @@ export class RecetasService {
     }
 
     //aquí va el método que llama a la api. Faltan urls de las Api (Laura, Sara)
-   
-    public getRecetas() {
-        //httpoptions
+  
+    public getRecetas(): void {
+       
         const httpOptions = {
             headers: new HttpHeaders(
                 {
+
                     // tslint:disable-next-line: object-literal-key-quotes
-                    'Authorization': 'Bearer ' + this.loginService.getToken()
+                    'Authorization': 'Bearer ' + this.loginService.getToken(),
+
+                    'Content-Type': 'application/json'
                 }
             )
         };
 
         //httpclient, con la url de la api
 
-        this.httpClient.get('http://localhost:8082/api/v1/recipes', httpOptions).subscribe(
+        this.httpClient.get("/api/recipes", httpOptions).subscribe(
             (response: any) => {
+                console.log(JSON.stringify(response))
                 this.recetas = response;
                 this.recetas$.next(this.recetas);
             },
             error => {
                 console.log(error);
+                console.log("Usuario no identificado")
             }
         );
 
     }
 
-    //Aquí haremos el método delete que borrará recetas
-    public deleteReceta(id: number){
-        const httpOptions = {
-            headers: new HttpHeaders(
-                {
-                    // tslint:disable-next-line: object-literal-key-quotes
-                    'Authorization': 'Bearer ' + this.loginService.getToken()
-                }
-            )
-        };
-        this.httpClient.delete('http://localhost:8082/api/v1/recipes' + id, httpOptions).subscribe(
-            (response: any) => {
-                // la respuesta cuando se borra es un getofertas que es donde está todo montado: la petición a la api
-                // la actualizacion y la notificacion.
-                console.log (response);
-                this.getRecetas();
-
-            },
-            error => {
-                console.log(error);
-            }
-        );
-    }
+    
 
 
     //Aquí el método que lleva al detalle de la receta. (Félix)
