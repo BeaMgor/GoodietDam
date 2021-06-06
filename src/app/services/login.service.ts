@@ -26,22 +26,25 @@ export class LoginService{
     }
 
 
-    public getToken(){
+    public getToken(): string{
         return this.token;
     }
 
     public postlogin(loginModel: LoginForm){
+        console.log(JSON.stringify(loginModel));
 
         const httpOptions = {
             headers: new HttpHeaders(
                 {
+                    
                     'Content-Type': 'application/json'
                 }
             )
         };
-        this.httpClient.post('http://localhost:8080/api/authenticate', JSON.stringify(loginModel), httpOptions).subscribe(
+        this.httpClient.post('/api/login', JSON.stringify(loginModel), httpOptions).subscribe(
             (response: any) => {
-                this.token = response.id_token;
+                console.log(response);
+                this.token = response.token;
                 this.islogin = true;
                 this.islogin$.next(this.islogin);
             },

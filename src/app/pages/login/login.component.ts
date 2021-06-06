@@ -1,5 +1,5 @@
 import { Router } from '@angular/router';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { LoginForm } from 'src/app/model/loginForm';
 import { LoginService } from 'src/app/services/login.service';
@@ -9,7 +9,7 @@ import { LoginService } from 'src/app/services/login.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit, OnDestroy {
 
   loginModel: LoginForm;
   sub: any;
@@ -21,6 +21,12 @@ export class LoginComponent implements OnInit {
   ) {
     this.loginModel = new LoginForm();
   }
+  
+  ngOnDestroy(): void {
+    this.sub.unsubscribe();
+  }
+
+  
 
   ngOnInit(): void {
 
@@ -38,7 +44,6 @@ export class LoginComponent implements OnInit {
       }
     );
   }
-
 
   public onSubmit(f: NgForm){
     this.loginService.postlogin(this.loginModel);
