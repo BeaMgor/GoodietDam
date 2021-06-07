@@ -29,6 +29,7 @@ export class RecetasComponent implements OnInit {
     // preparado.
     this.sub = this.recetaService.getRecetasSub().subscribe(
       (response: Array<Receta>) => {
+        console.log(response);
         this.recetas = response;
 
       },
@@ -40,12 +41,22 @@ export class RecetasComponent implements OnInit {
     this.recetaService.getRecetas();
   }
 
-  public deleteReceta(id: number): void {
-    console.log('Click ' + id);
+  public getDetalle(id:number):void{
+    console.log("Click"+id);
 
-    // Este metodo es el que se va a encargar de llamar al metodo del html que se encargara de llamar la API
-    // y comunicarle que un elemento ha siod eliminado.
-    this.recetaService.deleteReceta(id);
+    this.recetaService.getDetalle(id);
+    
+  }
+
+
+  /*tiene que ir función getDetalleReceta*/ 
+  public getDetalleReceta(id: number): void {
+    this.recetaService.getDetalle(id);
+  }
+
+  public irDetalle(id:any): void {
+    this.router.navigate(["/detalle", id])
+    this.recetaService.getDetalle(id);
   }
 
 }

@@ -3,6 +3,7 @@ import { Injectable } from "@angular/core";
 import { Observable, Subject } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { LoginService } from './login.service';
+import { Router } from '@angular/router';
 
 
 
@@ -17,12 +18,19 @@ export class RecetasService {
     private recetas: Array<Receta>;
     private recetas$: Subject<Array<Receta>>;
 
+    private detalle: Array<Receta>;
+    private detalle$: Subject<Array<Receta>>;
+
     constructor(
         private httpClient: HttpClient,
-        private loginService: LoginService
+        private loginService: LoginService,
+        private router: Router
     ){
         this.recetas = new Array<Receta>();
         this.recetas$ = new Subject<Array<Receta>>();
+
+        this.detalle = new Array<Receta>();
+        this.detalle$ = new Subject<Array<Receta>>();
     }
 
     public getRecetasSub(): Observable<any>{
@@ -33,7 +41,14 @@ export class RecetasService {
         return this.recetas;
     }
 
-    //aquí va el método que llama a la api. Faltan urls de las Api (Laura, Sara)
+    public getDetalleSub(): Observable<any>{
+        return this.detalle$
+    }
+
+    public getVistaDetalle(): Array<Receta>{
+        return this.detalle;
+
+    }
   
     public getRecetas(): void {
        
@@ -65,9 +80,38 @@ export class RecetasService {
 
     }
 
+
     
+    public getDetalle(id: number){
+       
+        const httpOptions = {
+            headers: new HttpHeaders(
+                {
 
+                    // tslint:disable-next-line: object-literal-key-quotes
+                    'Authorization': 'Bearer ' + this.loginService.getToken(),
 
-    //Aquí el método que lleva al detalle de la receta. (Félix)
+                    'Content-Type': 'application/json'
+                }
+            )
+        };
+
+        //httpclient, con la url de la api
+
+        this.httpClient.get("/api/recipes/"+id, httpOptions).subscribe(
+            (response: any) => {
+                console.log(JSON.stringify(response))
+                console.log("ey")
+                this.detalle$.next(this.detalle);
+            },
+            error => {
+                console.log(error);
+            
+            }
+        );
+
+    }
 
 }
+
+

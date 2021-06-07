@@ -27,3 +27,25 @@ H3{
     text-align: center;
     color: #2ca434;
 }
+
+label:hover,
+label:hover ~ label {
+  color: orange;
+}
+
+input[type="radio"] {
+    display: none;
+  }
+
+input[type="radio"]:checked ~ label {
+  color: orange;
+}
+
+label {
+    color: grey;
+  }
+
+.clasificacion {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+  }
